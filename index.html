@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Resposive Calculator</title>
+	<meta name="author" content="aksh">
+	<meta name="description" content="Resposive Calculator">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<link rel="icon" type="image/x-icon" href=""/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        
+        body{
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff00cc, #333399);
+            box-sizing: border-box;
+            
+        }
+        
+        .container{
+            width: 30%;
+            margin: 20px auto;
+            background: linear-gradient(to right, #c4d8f7, #43f74e, #93c5fe);
+            min-height: 700px;
+            max-height: 100%;
+            box-shadow: 0 0 5em -1em #0004ff;
+        }
+        @media (max-width:1200px){
+            .container{
+                width: 100%;
+                margin: 0px;
+            }   
+            
+            
+        }
+        .calscreen{
+            width: 90%;
+            min-height: 200px;
+            background-color: #111;
+            margin: 20px auto;     
+            border-top: 20px; 
+            max-height: auto;    
+        }
+        
+        .pads{
+            width: 90%;
+            min-height: 450px;
+            background-color: transparent;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .btn{
+            width: 23.3%;
+            height: auto;
+            background-color: transparent;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 2%;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .btn:hover{
+            background-color: #fff; 
+            color: #000;
+        }
+        
+        .operation{
+            width: 23.3%;
+            height: auto;
+            background-color: #222;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 2%;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .operation:hover{
+            background-color: #fff; 
+            color: #000;
+        }
+        
+        .history{
+            color: grey;
+            float: right;
+            font-size: 30px;
+            font-family: 'Indie Flower', cursive;
+            padding-right: 50px;
+
+        }
+        
+        .output{
+            color: white;
+            float: right;
+            font-size: 50px;
+            font-family: 'Indie Flower', cursive;
+            margin 0px;
+            height: auto;
+        }
+        
+        #output-value{
+            margin-bottom: 0px;
+        }
+        
+        .local1{
+            background-color: #000;
+            height: 300px;
+            overflow: scroll;
+            width: 90%;
+            margin: auto;
+            color: #fff;
+            font-family: cursive;
+            font-size: 15px;
+            
+        }
+    </style>    
+</head>
+
+<body>
+    <div class="container">
+        <div class="calscreen" id="result">
+            <div class="history" id="history">
+                <p id="history-value"></p>
+            </div>
+            <div class="output" id="output">
+                <br>
+                <p id="output-value"></p>
+            </div>
+        </div>    
+        <div class="pads">
+            <button class="btn" value="1" id="1">1</button>
+            <button class="btn" value="2" id="2">2</button>
+            <button class="btn" value="3" id="3">3</button>
+            <button class="operation" value="+" id="+">+</button>
+            <button class="btn" value="4" id="4">4</button>
+            <button class="btn" value="5" id="5">5</button>
+            <button class="btn" value="6" id="6">6</button>
+            <button class="operation" value="-" id="-">&minus;</button>
+            <button class="btn" value="7" id="7">7</button>
+            <button class="btn" value="8" id="8">8</button>
+            <button class="btn" value="9" id="9">9</button>
+            <button class="operation" value="*" id="*">*</button>
+            <button class="btn" value="0" id="0">0</button>
+            <button class="operation " value="." id=".">&#46;</button>
+            <button class="operation" value="=" id="=">=</button>
+            <button class="operation" value="/" id="/">/</button>
+            <button class="operation" value="clear" id="clear">AC</button>
+            <button class="operation" value="backspace" id="backspace">&#8592;</button>
+        </div>    
+        <div class="local1" id="local2">
+            <p>History</p>
+            <p id="local"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
