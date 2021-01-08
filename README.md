@@ -1,5 +1,5 @@
 # Assigment-2
-Responsive Javascrip Calculator with History LocalStorage Feature
+Responsive Javascript Calculator with History LocalStorage Feature
 
 
 
