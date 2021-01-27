@@ -1,4 +1,3 @@
-# Assigment-2
 Responsive Javascript Calculator with History LocalStorage Feature
 
 
